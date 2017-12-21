@@ -1,0 +1,19 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: eureka-server
+ cloud:
+   config:
+     uri: http://config:8888
+     fail-fast: true
+     username: root
+     password: root
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
